@@ -2,23 +2,23 @@
 title: "Why plain-text Markdown is the only format that will still matter in 2040"
 description: "Your notes should survive companies, formats, and hype cycles. Here's why .md on disk is the single responsible choice for anything you intend to keep."
 pubDate: "Jun 04 2026"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "/blog/why-plain-text-hero.jpg"
 ---
 
 Your life's work deserves a storage format that doesn't require a subscription, a running server from a defunct startup, or a custom binary reader written in 2027.
 
-Plain .md files win on every axis that matters for longevity:
-- Any text editor on any device can open them in 2040.
-- Git, rsync, Dropbox, Syncthing, and scp all just work.
-- They are the native format for Obsidian, Logseq, Typora, iA Writer, and a hundred other tools.
-- They are trivial to back up, grep, script, and convert.
+Plain .md files win on every axis that matters for longevity.
 
-Lumynn treats these files as sacred. The web interface, the agent, the RAG index — they are powerful lenses. The files remain yours.
+They are the only format that is guaranteed to remain readable without special software. Any text editor on any device, from a 1990s terminal to whatever we use in 2040, can open them. They require no runtime, no license server, no vendor migration path.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+They play beautifully with the rest of the computing world. Git histories, rsync, Dropbox, Syncthing, simple shell scripts, and basic backups all just work. You can grep them, count words in them, transform them with sed or pandoc, and feed them into any future tool that understands text.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+They are the native language of the best thinking tools available today: Obsidian, Logseq, Typora, iA Writer, and dozens of others. Choosing Markdown does not lock you into one application. It keeps your options open.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Most importantly, plain text forces clarity. When you cannot rely on proprietary formatting, databases, or "smart" features that only one app understands, you end up writing for humans first. That discipline produces notes that remain valuable long after the original author has moved on.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+Lumynn is built on this principle. The files on disk are the source of truth. The web interface, the tabs, the preview, the Copilot agent, and the RAG index are powerful lenses we place over your library. They can read, search, and suggest. But they never become the owner of the content.
+
+When you use Lumynn, you are not "uploading your second brain" to someone else's platform. You are pointing a sophisticated reader at a library you already control. If you stop using Lumynn tomorrow, your notes are still there, still plain text, still yours.
+
+That is the only responsible foundation for anything you intend to keep for decades.
