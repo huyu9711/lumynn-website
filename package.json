@@ -1,6 +1,6 @@
 {
 	"name": "lumynn-website",
-	"description": "Build a personal website, blog, or portfolio with Astro.",
+	"description": "Lumynn — Private Markdown workspace. The first product from Lumynn, building a family of private intelligence tools.",
 	"cloudflare": {
 		"label": "Astro Framework Starter",
 		"products": [

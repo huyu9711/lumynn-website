@@ -1,11 +1,15 @@
 ---
-title: "Second post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 15 2022"
+title: "Grounded AI is the only kind worth trusting with your notes"
+description: "When an agent cites the exact paragraph it read, you can verify. When it proposes an edit, you stay in control. That's the difference between a tool and a liability."
+pubDate: "Jun 04 2026"
 heroImage: "/blog-placeholder-4.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Most "AI for notes" products today are sophisticated ways to exfiltrate your thinking.
+
+Lumynn is the opposite. The retrieval layer only ever queries vectors and chunks you chose to index. The agent can only reference notes you explicitly attach with @ or that the hybrid retriever surfaces. When it wants to change something, it shows you a diff against the real file on disk.
+
+You stay the author. The model is a very well-read intern that never gets to publish without your signature.
 
 Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
 

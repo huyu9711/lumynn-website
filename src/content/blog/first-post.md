@@ -1,11 +1,19 @@
 ---
-title: "First post"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
+title: "Why plain-text Markdown is the only format that will still matter in 2040"
+description: "Your notes should survive companies, formats, and hype cycles. Here's why .md on disk is the single responsible choice for anything you intend to keep."
+pubDate: "Jun 04 2026"
 heroImage: "/blog-placeholder-3.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Your life's work deserves a storage format that doesn't require a subscription, a running server from a defunct startup, or a custom binary reader written in 2027.
+
+Plain .md files win on every axis that matters for longevity:
+- Any text editor on any device can open them in 2040.
+- Git, rsync, Dropbox, Syncthing, and scp all just work.
+- They are the native format for Obsidian, Logseq, Typora, iA Writer, and a hundred other tools.
+- They are trivial to back up, grep, script, and convert.
+
+Lumynn treats these files as sacred. The web interface, the agent, the RAG index — they are powerful lenses. The files remain yours.
 
 Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
 

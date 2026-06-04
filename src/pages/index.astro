@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 ---
 
 <!doctype html>
@@ -13,33 +13,173 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Your self-hosted markdown notes, powered by AI</h1>
-			<p>
-				A private web app for writing, organizing, and viewing markdown notes with built-in AI support.
-				Ask questions about your own notes, get instant summaries, and keep everything on your own server.
-			</p>
-			<section>
-				<h2>Why it matters</h2>
-				<p>
-				Not all productivity tools should live in the cloud. This app gives you full control over your notes
-				while adding smart AI interaction so your knowledge stays useful and accessible.
-				</p>
+			<!-- HERO -->
+			<section class="hero">
+				<div class="max-ch">
+					<div class="muted" style="font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.6rem;">Lumynn · First product</div>
+					<h1>{BRAND_POSITIONING}</h1>
+					<p class="sub">
+						The private Markdown workspace with AI that actually reads your notes.<br />
+						Your files on disk. Your server. Your models. No lock-in, ever.
+					</p>
+					<div class="ctas">
+						<a href="#get-started" class="btn btn-primary">Self-host Lumynn</a>
+						<a href="#features" class="btn btn-ghost">See what’s inside</a>
+					</div>
+				</div>
 			</section>
-			<section>
-				<h2>Core features</h2>
-				<ul>
-					<li>Write and edit notes using markdown syntax.</li>
-					<li>Preview rendered notes instantly with clean formatting.</li>
-					<li>Interact with AI to ask questions, summarize content, or explore ideas.</li>
-					<li>Self-hosted deployment for privacy, security, and ownership.</li>
+
+			<!-- TRUST / PROOF -->
+			<div class="trust">
+				<div>Plain-text Markdown files on your disk</div>
+				<div>Self-hosted — any server, NAS, or VPS</div>
+				<div>Multi-user with full isolation</div>
+				<div>Installable PWA on phone & desktop</div>
+				<div>Works with any OpenAI-compatible provider</div>
+			</div>
+
+			<!-- WHY PRIVATE -->
+			<section class="section" id="why">
+				<div class="max-ch">
+					<h2>Your knowledge is intellectual property.<br />Treat it like it is.</h2>
+					<p class="lead">
+						Most AI tools send your notes to someone else’s servers. Lumynn never does.
+						Everything stays on hardware you control. The AI only ever sees what you explicitly let it see through grounded retrieval.
+					</p>
+				</div>
+				<div class="grid grid-2" style="margin-top: 2.25rem;">
+					<div class="card">
+						<h3>Files that outlive any company</h3>
+						<p>Markdown on disk is the only format that will still be readable in 2040 without a vendor. No proprietary database. No export theater.</p>
+					</div>
+					<div class="card">
+						<h3>AI that is actually grounded in <em>your</em> work</h3>
+						<p>RAG + agent chat cite real passages from your library. When the model proposes an edit, you review and accept it into the real file.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- FEATURES -->
+			<section class="section" id="features">
+				<div style="margin-bottom: var(--lumynn-space-4);">
+					<div class="muted" style="font-size:.8rem; letter-spacing:.06em;">BUILT FOR PEOPLE WHO THINK IN PUBLIC (OR PRIVATE)</div>
+					<h2>The workspace, re-imagined for ownership + intelligence.</h2>
+				</div>
+
+				<div class="grid grid-3">
+					<div class="card">
+						<h3>Filesystem source of truth</h3>
+						<p>Point Lumynn at any folder of Markdown files (or an existing Obsidian vault). Edits are atomic writes to real .md files. No sync surprises.</p>
+					</div>
+					<div class="card">
+						<h3>Grounded Copilot</h3>
+						<p>Ask questions, attach specific notes with @, get answers with citations you can click to open. The agent can propose precise edits you approve.</p>
+					</div>
+					<div class="card">
+						<h3>Modern editor, real preview</h3>
+						<p>Multi-tab, WYSIWYG + source modes, Obsidian embeds, math, tasks, wikilinks — all rendered cleanly. Per-tab edit/preview state.</p>
+					</div>
+					<div class="card">
+						<h3>RAG that you actually control</h3>
+						<p>Configure any OpenAI-compatible embedding and chat endpoint (local Ollama, vLLM, OpenAI, etc.). Incremental indexing. Test jobs. Exportable (secrets redacted).</p>
+					</div>
+					<div class="card">
+						<h3>Multi-user, zero leakage</h3>
+						<p>Each person gets their own isolated library, vector index, and provider keys. Admins cannot read user data. Perfect for families, labs, small teams.</p>
+					</div>
+					<div class="card">
+						<h3>Native everywhere</h3>
+						<p>Full PWA. Mobile feels like a native app (editor-first, drawers, swipe-to-close, pull-to-search, undo toasts). Works great on desktop too.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- IN THE PRODUCT (real screenshots) -->
+			<section class="section">
+				<div style="margin-bottom: var(--lumynn-space-4);">
+					<h2>Real interface. No marketing renderings.</h2>
+					<p class="muted">Three-pane workspace, Copilot, mobile flows — exactly what you get when you run it.</p>
+				</div>
+
+				<div class="grid grid-2">
+					<div>
+						<div class="screenshot">
+							<img src="/screenshots/workspace-fixed.png" alt="Lumynn workspace: library tree on left, editor in center, Copilot agent on right, dark theme" />
+						</div>
+						<div class="screenshot-caption">Desktop workspace — library, multi-tab editor, grounded agent chat</div>
+					</div>
+					<div>
+						<div class="screenshot">
+							<img src="/screenshots/login-desktop-light.png" alt="Lumynn login and light theme workspace view" />
+						</div>
+						<div class="screenshot-caption">Light theme (warm sand) — same power, paper-like reading</div>
+					</div>
+				</div>
+
+				<div style="margin-top: 1.5rem;">
+					<div class="screenshot">
+						<img src="/screenshots/login-mobile-dark.png" alt="Lumynn on mobile: clean editor-first experience with bottom navigation" />
+					</div>
+					<div class="screenshot-caption">Mobile PWA — editor always front and center, library and Ask in drawers</div>
+				</div>
+			</section>
+
+			<!-- WHO IT'S FOR -->
+			<section class="section">
+				<div class="max-ch">
+					<h2>For people whose notes actually matter.</h2>
+					<p class="lead">Researchers. Writers. Developers. Anyone building a body of work that needs to stay private, searchable, and useful for decades — not just until the next SaaS pricing change.</p>
+				</div>
+				<ul class="principles" style="margin-top: 1.5rem; max-width: 52ch;">
+					<li>Your second brain belongs on hardware you own.</li>
+					<li>AI is only valuable when it can’t hallucinate your own research.</li>
+					<li>Plain text is the ultimate vendor escape hatch.</li>
+					<li>Teams deserve isolation without giving a third party the keys.</li>
 				</ul>
 			</section>
-			<section>
-				<h2>Get started</h2>
-				<p>
-				Install the app, point it at your server or home network, and start capturing knowledge in markdown.
-				Then use the AI assistant to turn your notes into answers, insights, and next actions.
-				</p>
+
+			<!-- LONG GAME / FAMILY -->
+			<section class="section">
+				<div class="max-ch">
+					<div class="muted" style="font-size:.8rem; letter-spacing:.06em;">THE LONG GAME</div>
+					<h2>Lumynn is the first product. Not the last.</h2>
+					<p>
+						We are building a family of private intelligence tools that treat your data as the asset it is.
+						Lumynn (Markdown + grounded agents) is the foundation. Everything that follows will feel like it belongs in the same world: yours.
+					</p>
+				</div>
+			</section>
+
+			<!-- GET STARTED -->
+			<section class="section" id="get-started">
+				<div class="max-ch">
+					<h2>Get started in minutes.</h2>
+					<p class="lead">Lumynn is a Node.js + React web app. Point it at a folder of Markdown files and you’re running.</p>
+
+					<div class="card" style="margin: 1.5rem 0;">
+						<ol style="padding-left: 1.1em; margin: 0;">
+							<li style="margin-bottom: .6em;">Clone or deploy the server (Docker, VPS, NAS, or even a laptop on your LAN).</li>
+							<li style="margin-bottom: .6em;">Set <code>ALLOWED_VAULT_ROOTS</code> and a strong session secret. First login creates the admin account.</li>
+							<li>Point it at any existing Markdown folder (or start fresh). Configure an embedding + chat provider if you want the AI features.</li>
+						</ol>
+					</div>
+
+					<p>
+						Full instructions, <code>server.sh</code> helper, and production hardening notes live in the repository.
+					</p>
+					<div class="ctas" style="margin-top: 1rem;">
+						<a href="https://github.com/huyu9711/lumynn" target="_blank" class="btn btn-primary">View source & deploy guide</a>
+						<a href="/about" class="btn btn-ghost">Read the story</a>
+					</div>
+					<p class="muted" style="margin-top: 1.25rem; font-size: .85rem;">No sign-up. No telemetry. Your instance, your rules.</p>
+				</div>
+			</section>
+
+			<!-- FINAL CTA -->
+			<section class="section" style="text-align:center; padding-bottom: 5rem;">
+				<h2 style="font-size:2rem;">Your notes deserve better than someone else’s cloud.</h2>
+				<p style="margin-bottom: 1.5rem;">Start with Lumynn today.</p>
+				<a href="#get-started" class="btn btn-primary" style="font-size:1rem; padding: 0.9rem 2.1rem;">Self-host Lumynn</a>
 			</section>
 		</main>
 		<Footer />

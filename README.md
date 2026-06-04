@@ -1,14 +1,24 @@
-# Astro Starter Kit: Blog
+# Lumynn Website
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+Official marketing site for Lumynn — the private Markdown workspace (first product from Lumynn, building a family of private intelligence tools).
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+Built with Astro + Cloudflare Workers (static + server adapter for future needs). Brand and visual language aligned with the Lumynn app (warm sand / olive minimalist editorial).
 
-<!-- dash-content-start -->
+Deployed via wrangler. Self-host instructions and source for the product itself: https://github.com/huyu9711/lumynn.
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+## Local dev
+```bash
+npm install
+npm run dev
+```
 
-Features:
+## Build & deploy
+```bash
+npm run build
+npm run preview   # or wrangler deploy
+```
+
+<!-- original template notes below for reference -->
 
 - ✅ Minimal styling (make it your own!)
 - ✅ 100/100 Lighthouse performance
