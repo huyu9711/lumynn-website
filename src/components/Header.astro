@@ -1,14 +1,17 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import Logo from './Logo.astro';
-import { SITE_TAGLINE } from '../consts';
+import { SITE_TAGLINE, BRAND_POSITIONING } from '../consts';
+
+const isHome = Astro.url.pathname === '/';
+const headerTagline = isHome ? BRAND_POSITIONING : SITE_TAGLINE;
 ---
 
 <header class="site-header">
 	<nav class="nav">
-		<div style="display:flex; align-items:center; gap:.4rem;">
+		<div style="display:flex; align-items:center; gap:.4rem; max-width: 320px;">
 			<Logo />
-			<span class="tag muted" style="font-size:.72rem; font-weight:400; letter-spacing:0;">{SITE_TAGLINE}</span>
+			<span class="tag muted" style={`font-size:${isHome ? '0.58rem' : '.72rem'}; font-weight:400; letter-spacing:0; line-height:1.1;`}>{headerTagline}</span>
 		</div>
 
 		<div class="links">
