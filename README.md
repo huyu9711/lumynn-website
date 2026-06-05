@@ -4,7 +4,7 @@ Official marketing site for Lumynn - the private Markdown workspace (first produ
 
 Built with Astro + Cloudflare Workers (static + server adapter for future needs). Brand and visual language aligned with the Lumynn app (warm sand / olive minimalist editorial).
 
-Deployed via wrangler. Self-host instructions and source for the product itself: https://github.com/huyu9711/lumynn.
+Deployed via wrangler. Self-host instructions and source for the product itself: https://github.com/lumynn-com/lumynn.
 
 ## Local dev
 ```bash
