@@ -19,6 +19,9 @@ const posts = (await getCollection('blog')).sort(
 			main {
 				width: 960px;
 			}
+			.blog-header { margin-bottom: 2rem; }
+			.blog-title { font-size: 2rem; margin-bottom: 0.35rem; }
+			.blog-desc { max-width: 52ch; }
 			ul {
 				display: flex;
 				flex-wrap: wrap;
@@ -76,9 +79,9 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section style="margin-bottom: 2rem;">
-				<h1 style="font-size:2rem; margin-bottom:.35rem;">Notes</h1>
-				<p class="muted" style="max-width:52ch;">On private knowledge systems, grounded AI, plain text longevity, and building tools worth using for decades.</p>
+			<section class="blog-header">
+				<h1 class="blog-title">Notes</h1>
+				<p class="muted blog-desc">On private knowledge systems, grounded AI, plain text longevity, and building tools worth using for decades.</p>
 			</section>
 			<section>
 				<ul>

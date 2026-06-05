@@ -1,8 +1,8 @@
-// Lumynn brand constants — first product of the Lumynn company (private intelligence tools).
+// Lumynn brand constants - first product of the Lumynn company (private intelligence tools).
 // Aligned with app i18n and visual identity (warm sand light + olive accents; near-black dark).
 
 export const SITE_TITLE = "Lumynn";
-export const SITE_DESCRIPTION = "Private Markdown workspace with AI that reads your notes — on your server, your files, your terms.";
+export const SITE_DESCRIPTION = "Private Markdown workspace with AI that reads your notes. On your server, your files, your terms.";
 export const SITE_TAGLINE = "Private Markdown workspace";
 export const BRAND_POSITIONING = "From intellectual property to strategic clarity.";
 

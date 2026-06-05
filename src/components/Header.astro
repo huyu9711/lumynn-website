@@ -9,7 +9,7 @@ const headerTagline = isHome ? BRAND_POSITIONING : SITE_TAGLINE;
 
 <header class="site-header">
 	<nav class="nav">
-		<div style="display:flex; align-items:center; gap:.4rem; max-width: 320px;">
+		<div class="brand-area">
 			<Logo />
 			<span class="tag muted" style={`font-size:${isHome ? '0.58rem' : '.72rem'}; font-weight:400; letter-spacing:0; line-height:1.1;`}>{headerTagline}</span>
 		</div>
@@ -45,6 +45,12 @@ const headerTagline = isHome ? BRAND_POSITIONING : SITE_TAGLINE;
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+	}
+	.brand-area {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		max-width: 320px;
 	}
 	.logo {
 		display: inline-flex;

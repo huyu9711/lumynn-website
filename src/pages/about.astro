@@ -9,19 +9,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead
-			title={`About — ${SITE_TITLE}`}
+			title={`About - ${SITE_TITLE}`}
 			description="Lumynn is our first product: a private Markdown workspace with grounded AI. We build tools that treat your knowledge as the asset it is."
 		/>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section class="hero" style="padding-bottom: 2.5rem;">
+			<section class="hero about-hero">
 				<div class="max-ch">
-					<div class="muted" style="font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.5rem;">COMPANY + PHILOSOPHY</div>
+					<div class="section-eyebrow muted about-eyebrow">COMPANY + PHILOSOPHY</div>
 					<h1>Lumynn is our first product.</h1>
 					<p class="lead">
-						We are building a small family of private intelligence tools for people whose notes, research, and writing need to stay theirs — for decades, not until the next acquisition or pricing email.
+						We are building a small family of private intelligence tools for people whose notes, research, and writing need to stay theirs. For decades, not until the next acquisition or pricing email.
 					</p>
 				</div>
 			</section>
@@ -43,8 +43,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<h2>Principles we won’t compromise.</h2>
 					<ul class="principles">
 						<li><strong>Plain text is non-negotiable.</strong> If it can’t survive without our software, it doesn’t belong in your permanent record.</li>
-						<li><strong>Grounded or nothing.</strong> The AI must be able to show its work — citations you can click, proposals you can accept or reject into the real file.</li>
-						<li><strong>You choose the model.</strong> Local, hosted, cheap, frontier — any OpenAI-compatible endpoint. We don’t pick winners.</li>
+						<li><strong>Grounded or nothing.</strong> The AI must be able to show its work: citations you can click, proposals you can accept or reject into the real file.</li>
+						<li><strong>You choose the model.</strong> Local, hosted, cheap, frontier. Any OpenAI-compatible endpoint. We don’t pick winners.</li>
 						<li><strong>Isolation by default.</strong> In a multi-user instance, one person’s library and keys are invisible to everyone else, including admins.</li>
 						<li><strong>The interface serves the files.</strong> Modern UX is table stakes, but the files always win. The web view is a powerful lens, not the owner.</li>
 					</ul>
@@ -57,21 +57,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<p>
 						Lumynn (private Markdown + agents) is the first. Future tools will share the same DNA: everything important lives in formats you control, intelligence runs where you decide, and the experience feels calm and precise rather than magical and extractive.
 					</p>
-					<p class="muted" style="margin-top:1rem;">
+					<p class="muted about-note">
 						We are deliberately small and opinionated. We would rather have a few thousand serious users who love owning their stack than millions of free accounts whose data we monetize.
 					</p>
 				</div>
 			</section>
 
-			<section class="section" style="padding-bottom: 4.5rem;">
+			<section class="section contact-section">
 				<div class="max-ch">
 					<h2>Get in touch.</h2>
 					<p>
-						Questions about self-hosting, feedback on the direction, or interest in what comes next — reach us through the repository or the channels we publish on the site.
+						Questions about self-hosting, feedback on the direction, or interest in what comes next. Reach us through the repository or the channels we publish on the site.
 					</p>
-					<p style="margin-top: 1.5rem;">
+					<p class="contact-actions">
 						<a href="https://github.com/huyu9711/lumynn" target="_blank" class="btn btn-primary">GitHub</a>
-						<a href="/blog" class="btn btn-ghost" style="margin-left: .5rem;">Read the notes</a>
+						<a href="/blog" class="btn btn-ghost contact-secondary">Read the notes</a>
 					</p>
 				</div>
 			</section>

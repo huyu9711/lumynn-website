@@ -23,4 +23,4 @@ Because everything stays on hardware you control, you decide which models are al
 
 Because the source files remain plain Markdown, any future tool you adopt can read them. The intelligence layer is an enhancement, not a replacement for the underlying asset.
 
-This is what "grounded" means in practice: the model is not inventing a corporate knowledge base and hoping it applies to you. It is reading the actual work you have already done, in the format you chose to keep it, and offering help while leaving the final authority where it belongs — with the person whose name is on the files.
+This is what "grounded" means in practice: the model is not inventing a corporate knowledge base and hoping it applies to you. It is reading the actual work you have already done, in the format you chose to keep it, and offering help while leaving the final authority where it belongs. With the person whose name is on the files.

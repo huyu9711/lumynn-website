@@ -16,7 +16,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 			<!-- HERO -->
 			<section class="hero">
 				<div class="max-ch">
-					<div class="muted" style="font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.6rem;">Lumynn · First product</div>
 					<h1>{BRAND_POSITIONING}</h1>
 					<p class="sub">
 						The private Markdown workspace with AI that actually reads your notes.<br />
@@ -32,7 +31,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 			<!-- TRUST / PROOF -->
 			<div class="trust">
 				<div>Plain-text Markdown files on your disk</div>
-				<div>Self-hosted — any server, NAS, or VPS</div>
+				<div>Self-hosted. Any server, NAS, or VPS.</div>
 				<div>Multi-user with full isolation</div>
 				<div>Installable PWA on phone & desktop</div>
 				<div>Works with any OpenAI-compatible provider</div>
@@ -47,7 +46,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 						Everything stays on hardware you control. The AI only ever sees what you explicitly let it see through grounded retrieval.
 					</p>
 				</div>
-				<div class="grid grid-2" style="margin-top: 2.25rem;">
+				<div class="grid grid-2 why-cards">
 					<div class="card">
 						<h3>Files that outlive any company</h3>
 						<p>Markdown on disk is the only format that will still be readable in 2040 without a vendor. No proprietary database. No export theater.</p>
@@ -61,33 +60,33 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 
 			<!-- FEATURES -->
 			<section class="section" id="features">
-				<div style="margin-bottom: var(--lumynn-space-4);">
-					<div class="muted" style="font-size:.8rem; letter-spacing:.06em;">BUILT FOR PEOPLE WHO THINK IN PUBLIC (OR PRIVATE)</div>
+				<div class="section-intro">
+					<div class="section-eyebrow muted">BUILT FOR PEOPLE WHO THINK IN PUBLIC (OR PRIVATE)</div>
 					<h2>The workspace, re-imagined for ownership + intelligence.</h2>
 				</div>
 
-				<div class="grid grid-3">
-					<div class="card">
+				<div class="features">
+					<div class="feature">
 						<h3>Filesystem source of truth</h3>
 						<p>Point Lumynn at any folder of Markdown files (or an existing Obsidian vault). Edits are atomic writes to real .md files. No sync surprises.</p>
 					</div>
-					<div class="card">
+					<div class="feature">
 						<h3>Grounded Copilot</h3>
 						<p>Ask questions, attach specific notes with @, get answers with citations you can click to open. The agent can propose precise edits you approve.</p>
 					</div>
-					<div class="card">
+					<div class="feature">
 						<h3>Modern editor, real preview</h3>
-						<p>Multi-tab, WYSIWYG + source modes, Obsidian embeds, math, tasks, wikilinks — all rendered cleanly. Per-tab edit/preview state.</p>
+						<p>Multi-tab, WYSIWYG + source modes, Obsidian embeds, math, tasks, wikilinks. All rendered cleanly. Per-tab edit/preview state.</p>
 					</div>
-					<div class="card">
+					<div class="feature">
 						<h3>RAG that you actually control</h3>
 						<p>Configure any OpenAI-compatible embedding and chat endpoint (local Ollama, vLLM, OpenAI, etc.). Incremental indexing. Test jobs. Exportable (secrets redacted).</p>
 					</div>
-					<div class="card">
+					<div class="feature">
 						<h3>Multi-user, zero leakage</h3>
 						<p>Each person gets their own isolated library, vector index, and provider keys. Admins cannot read user data. Perfect for families, labs, small teams.</p>
 					</div>
-					<div class="card">
+					<div class="feature">
 						<h3>Native everywhere</h3>
 						<p>Full PWA. Mobile feels like a native app (editor-first, drawers, swipe-to-close, pull-to-search, undo toasts). Works great on desktop too.</p>
 					</div>
@@ -96,59 +95,53 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 
 			<!-- IN THE PRODUCT (real screenshots) -->
 			<section class="section">
-				<div style="margin-bottom: var(--lumynn-space-4);">
+				<div class="section-intro">
 					<h2>Real interface. No marketing renderings.</h2>
-					<p class="muted">Three-pane workspace, Copilot, mobile flows — exactly what you get when you run it.</p>
+					<p class="muted">Three-pane workspace, Copilot, mobile flows. Exactly what you get when you run it.</p>
 				</div>
 
-				<div class="grid grid-2">
+				<div class="screenshots">
 					<div>
-						<div class="screenshot">
+						<div class="screenshot" title="Click to enlarge">
 							<img src="/screenshots/workspace-fixed.png" alt="Lumynn workspace: library tree on left, editor in center, Copilot agent on right, dark theme" />
 						</div>
-						<div class="screenshot-caption">Desktop workspace — library, multi-tab editor, grounded agent chat</div>
+						<div class="screenshot-caption">Desktop workspace: library, multi-tab editor, grounded agent chat</div>
 					</div>
 					<div>
-						<div class="screenshot">
+						<div class="screenshot" title="Click to enlarge">
 							<img src="/screenshots/login-desktop-light.png" alt="Lumynn login and light theme workspace view" />
 						</div>
-						<div class="screenshot-caption">Light theme (warm sand) — same power, paper-like reading</div>
+						<div class="screenshot-caption">Light theme (warm sand): same power, paper-like reading</div>
 					</div>
-				</div>
-
-				<div style="margin-top: 1.5rem; display: flex; justify-content: center;">
-					<div style="width: 100%; max-width: 340px;">
-						<div class="screenshot">
+					<div>
+						<div class="screenshot" title="Click to enlarge">
 							<img src="/screenshots/login-mobile-dark.png" alt="Lumynn on mobile: clean editor-first experience with bottom navigation" />
 						</div>
-						<div class="screenshot-caption">Mobile PWA — editor always front and center, library and Ask in drawers</div>
+						<div class="screenshot-caption">Mobile PWA: editor always front and center, library and Ask in drawers</div>
 					</div>
 				</div>
 			</section>
+
+			<!-- Lightbox modal for enlarged screenshots -->
+			<div id="lightbox" class="lightbox" hidden>
+				<div class="lightbox-content">
+					<button type="button" class="lightbox-close" aria-label="Close enlarged image">×</button>
+					<img id="lightbox-img" alt="" />
+					<div id="lightbox-caption" class="lightbox-caption"></div>
+				</div>
+			</div>
 
 			<!-- WHO IT'S FOR -->
 			<section class="section">
 				<div class="max-ch">
 					<h2>For people whose notes actually matter.</h2>
-					<p class="lead">Researchers. Writers. Developers. Anyone building a body of work that needs to stay private, searchable, and useful for decades — not just until the next SaaS pricing change.</p>
-				</div>
-				<ul class="principles" style="margin-top: 1.5rem; max-width: 52ch;">
-					<li>Your second brain belongs on hardware you own.</li>
-					<li>AI is only valuable when it can’t hallucinate your own research.</li>
-					<li>Plain text is the ultimate vendor escape hatch.</li>
-					<li>Teams deserve isolation without giving a third party the keys.</li>
-				</ul>
-			</section>
-
-			<!-- LONG GAME / FAMILY -->
-			<section class="section">
-				<div class="max-ch">
-					<div class="muted" style="font-size:.8rem; letter-spacing:.06em;">THE LONG GAME</div>
-					<h2>Lumynn is the first product. Not the last.</h2>
-					<p>
-						We are building a family of private intelligence tools that treat your data as the asset it is.
-						Lumynn (Markdown + grounded agents) is the foundation. Everything that follows will feel like it belongs in the same world: yours.
-					</p>
+					<p class="lead">Researchers. Writers. Developers. Anyone building a body of work that needs to stay private, searchable, and useful for decades. Not just until the next SaaS pricing change.</p>
+					<ul class="principles who-principles">
+						<li>Your second brain belongs on hardware you own.</li>
+						<li>AI is only valuable when it can’t hallucinate your own research.</li>
+						<li>Plain text is the ultimate vendor escape hatch.</li>
+						<li>Teams deserve isolation without giving a third party the keys.</li>
+					</ul>
 				</div>
 			</section>
 
@@ -158,10 +151,10 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 					<h2>Get started in minutes.</h2>
 					<p class="lead">Lumynn is a Node.js + React web app. Point it at a folder of Markdown files and you’re running.</p>
 
-					<div class="card" style="margin: 1.5rem 0;">
-						<ol style="padding-left: 1.1em; margin: 0;">
-							<li style="margin-bottom: .6em;">Clone or deploy the server (Docker, VPS, NAS, or even a laptop on your LAN).</li>
-							<li style="margin-bottom: .6em;">Set <code>ALLOWED_VAULT_ROOTS</code> and a strong session secret. First login creates the admin account.</li>
+					<div class="card get-started-steps">
+						<ol>
+							<li>Clone or deploy the server (Docker, VPS, NAS, or even a laptop on your LAN).</li>
+							<li>Set <code>ALLOWED_VAULT_ROOTS</code> and a strong session secret. First login creates the admin account.</li>
 							<li>Point it at any existing Markdown folder (or start fresh). Configure an embedding + chat provider if you want the AI features.</li>
 						</ol>
 					</div>
@@ -169,21 +162,97 @@ import { SITE_TITLE, SITE_DESCRIPTION, BRAND_POSITIONING } from '../consts';
 					<p>
 						Full instructions, <code>server.sh</code> helper, and production hardening notes live in the repository.
 					</p>
-					<div class="ctas" style="margin-top: 1rem;">
+					<div class="ctas get-started-ctas">
 						<a href="https://github.com/huyu9711/lumynn" target="_blank" class="btn btn-primary">View source & deploy guide</a>
 						<a href="/about" class="btn btn-ghost">Read the story</a>
 					</div>
-					<p class="muted" style="margin-top: 1.25rem; font-size: .85rem;">No sign-up. No telemetry. Your instance, your rules.</p>
+					<p class="muted get-started-note">No sign-up. No telemetry. Your instance, your rules.</p>
 				</div>
 			</section>
 
 			<!-- FINAL CTA -->
-			<section class="section" style="text-align:center; padding-bottom: 5rem;">
-				<h2 style="font-size:2rem;">Your notes deserve better than someone else’s cloud.</h2>
-				<p style="margin-bottom: 1.5rem;">Start with Lumynn today.</p>
-				<a href="#get-started" class="btn btn-primary" style="font-size:1rem; padding: 0.9rem 2.1rem;">Self-host Lumynn</a>
+			<section class="section final-cta">
+				<h2 class="cta-headline">Your notes deserve better than someone else’s cloud.</h2>
+				<p>Start with Lumynn today.</p>
+				<a href="#get-started" class="btn btn-primary cta-btn">Self-host Lumynn</a>
 			</section>
 		</main>
 		<Footer />
+
+		<script>
+			// Simple lightbox for screenshots - click to view at normal size
+			function initLightbox() {
+				const lightbox = document.getElementById('lightbox');
+				if (!lightbox) return;
+
+				const lightboxImg = document.getElementById('lightbox-img');
+				const lightboxCap = document.getElementById('lightbox-caption');
+				const closeBtn = lightbox.querySelector('.lightbox-close');
+
+				function openLightbox(src, alt, caption) {
+					lightboxImg.src = src;
+					lightboxImg.alt = alt || '';
+					lightboxCap.textContent = caption || '';
+					lightbox.hidden = false;
+					lightbox.classList.add('active');
+					document.body.style.overflow = 'hidden';
+				}
+
+				function closeLightbox() {
+					lightbox.classList.remove('active');
+					lightbox.hidden = true;
+					document.body.style.overflow = '';
+					// Clear src to free memory if wanted
+					// lightboxImg.src = '';
+				}
+
+				// Make all screenshots in the grid clickable
+				document.querySelectorAll('.screenshots .screenshot').forEach((el) => {
+					el.addEventListener('click', () => {
+						const img = el.querySelector('img');
+						if (!img) return;
+						const captionEl = el.parentElement.querySelector('.screenshot-caption');
+						const caption = captionEl ? captionEl.textContent.trim() : '';
+						openLightbox(img.src, img.alt, caption);
+					});
+
+					// Keyboard accessibility
+					el.setAttribute('role', 'button');
+					el.setAttribute('tabindex', '0');
+					el.addEventListener('keydown', (e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							el.click();
+						}
+					});
+				});
+
+				// Close interactions
+				if (closeBtn) {
+					closeBtn.addEventListener('click', closeLightbox);
+				}
+
+				// Click on backdrop to close
+				lightbox.addEventListener('click', (e) => {
+					if (e.target === lightbox) {
+						closeLightbox();
+					}
+				});
+
+				// ESC key
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+						closeLightbox();
+					}
+				});
+			}
+
+			// Initialize after DOM ready (Astro static page)
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initLightbox);
+			} else {
+				initLightbox();
+			}
+		</script>
 	</body>
 </html>

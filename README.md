@@ -1,6 +1,6 @@
 # Lumynn Website
 
-Official marketing site for Lumynn — the private Markdown workspace (first product from Lumynn, building a family of private intelligence tools).
+Official marketing site for Lumynn - the private Markdown workspace (first product from Lumynn, building a family of private intelligence tools).
 
 Built with Astro + Cloudflare Workers (static + server adapter for future needs). Brand and visual language aligned with the Lumynn app (warm sand / olive minimalist editorial).
 
@@ -11,6 +11,10 @@ Deployed via wrangler. Self-host instructions and source for the product itself:
 npm install
 npm run dev
 ```
+
+The dev server listens on `0.0.0.0` (see `astro.config.mjs` + `package.json`).  
+Look for the **Network** address in the terminal output (your VM's IP).  
+Access it from your host browser at that address (you may need port forwarding / bridged networking in the VM).
 
 ## Build & deploy
 ```bash
@@ -57,7 +61,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                           | Action                                           |
 | :-------------------------------- | :----------------------------------------------- |
 | `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
+| `npm run dev`                     | Starts dev server on 0.0.0.0 (accessible from host/ network) |
 | `npm run build`                   | Build your production site to `./dist/`          |
 | `npm run preview`                 | Preview your build locally, before deploying     |
 | `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
