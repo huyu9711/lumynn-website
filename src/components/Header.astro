@@ -11,7 +11,7 @@ const headerTagline = isHome ? BRAND_POSITIONING : SITE_TAGLINE;
 	<nav class="nav">
 		<div class="brand-area">
 			<Logo />
-			<span class="tag muted" style={`font-size:${isHome ? '0.58rem' : '.72rem'}; font-weight:400; letter-spacing:0; line-height:1.1;`}>{headerTagline}</span>
+			<span class="tag muted" style={`font-size:${isHome ? '0.72rem' : '.72rem'}; font-weight:400; letter-spacing:0; line-height:1.1;`}>{headerTagline}</span>
 		</div>
 
 		<div class="links">
@@ -25,7 +25,25 @@ const headerTagline = isHome ? BRAND_POSITIONING : SITE_TAGLINE;
 			<a href="https://github.com/lumynn-com/lumynn" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
 			<a href="/#get-started" class="btn btn-primary">Self-host Lumynn</a>
 		</div>
+
+		<button class="hamburger" aria-label="Open menu" aria-expanded="false">
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+		</button>
 	</nav>
+
+	<div class="mobile-nav" id="mobile-nav" hidden>
+		<div class="mobile-nav-inner">
+			<a href="/" class="mobile-nav-link">Home</a>
+			<a href="/#features" class="mobile-nav-link">Features</a>
+			<a href="/blog" class="mobile-nav-link">Notes</a>
+			<a href="/about" class="mobile-nav-link">About</a>
+			<div class="mobile-nav-divider"></div>
+			<a href="https://github.com/lumynn-com/lumynn" target="_blank" rel="noopener" class="mobile-nav-link">GitHub</a>
+			<a href="/#get-started" class="mobile-nav-cta">Self-host Lumynn</a>
+		</div>
+	</div>
 </header>
 
 <style>
@@ -82,9 +100,143 @@ const headerTagline = isHome ? BRAND_POSITIONING : SITE_TAGLINE;
 		align-items: center;
 		gap: 0.6rem;
 	}
-	@media (max-width: 720px) {
+
+	/* Hamburger */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+		width: 36px;
+		height: 36px;
+		padding: 6px;
+		border: 1px solid var(--lumynn-border);
+		border-radius: 6px;
+		background: var(--lumynn-surface);
+		cursor: pointer;
+		transition: border-color 120ms var(--lumynn-ease);
+	}
+	.hamburger:hover { border-color: var(--lumynn-border-strong); }
+	.hamburger-line {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: var(--lumynn-ink);
+		border-radius: 1px;
+		transition: transform 180ms var(--lumynn-ease), opacity 180ms var(--lumynn-ease);
+	}
+	.hamburger[aria-expanded="true"] .hamburger-line:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+	.hamburger[aria-expanded="true"] .hamburger-line:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger[aria-expanded="true"] .hamburger-line:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	/* Mobile nav drawer */
+	.mobile-nav {
+		overflow: hidden;
+		border-top: 1px solid var(--lumynn-border);
+		background: var(--lumynn-bg);
+	}
+	.mobile-nav:not([hidden]) {
+		animation: mobileNavIn 200ms var(--lumynn-ease) both;
+	}
+	.mobile-nav[hidden] {
+		display: none;
+	}
+	@keyframes mobileNavIn {
+		from { max-height: 0; opacity: 0; }
+		to { max-height: 400px; opacity: 1; }
+	}
+	.mobile-nav-inner {
+		max-width: 1080px;
+		margin: 0 auto;
+		padding: 1rem 1.25rem 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+	.mobile-nav-link {
+		display: block;
+		padding: 0.7rem 0.5rem;
+		color: var(--lumynn-muted);
+		font-size: 1.05rem;
+		text-decoration: none;
+		border-bottom: none !important;
+		border-radius: 6px;
+		transition: background 120ms var(--lumynn-ease), color 120ms var(--lumynn-ease);
+	}
+	.mobile-nav-link:hover {
+		background: var(--lumynn-olive-weak);
+		color: var(--lumynn-ink);
+	}
+	.mobile-nav-divider {
+		height: 1px;
+		background: var(--lumynn-border);
+		margin: 0.35rem 0.5rem;
+	}
+	.mobile-nav-cta {
+		display: block;
+		margin-top: 0.5rem;
+		padding: 0.75rem 0.5rem;
+		text-align: center;
+		font-weight: 600;
+		font-size: 1rem;
+		color: var(--lumynn-bg);
+		background: var(--lumynn-ink);
+		border-radius: 6px;
+		text-decoration: none;
+		border-bottom: none !important;
+		transition: background 120ms var(--lumynn-ease);
+	}
+	.mobile-nav-cta:hover { background: var(--lumynn-accent-dark); }
+
+	@media (min-width: 769px) {
+		.mobile-nav { display: none !important; }
+	}
+	@media (max-width: 768px) {
 		.links { display: none; }
-		.actions .btn-ghost { display: none; }
+		.actions { display: none; }
+		.hamburger { display: flex; }
 		.nav { padding: 0.7rem 1rem; }
 	}
 </style>
+
+<script>
+	function initMobileNav() {
+		const btn = document.querySelector('.hamburger');
+		const panel = document.getElementById('mobile-nav');
+		if (!btn || !panel) return;
+
+		btn.addEventListener('click', () => {
+			const open = btn.getAttribute('aria-expanded') === 'true';
+			btn.setAttribute('aria-expanded', String(!open));
+			btn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+			if (open) {
+				panel.setAttribute('hidden', '');
+				document.body.style.overflow = '';
+			} else {
+				panel.removeAttribute('hidden');
+				document.body.style.overflow = 'hidden';
+			}
+		});
+
+		panel.querySelectorAll('a').forEach((link) => {
+			link.addEventListener('click', () => {
+				btn.setAttribute('aria-expanded', 'false');
+				btn.setAttribute('aria-label', 'Open menu');
+				panel.setAttribute('hidden', '');
+				document.body.style.overflow = '';
+			});
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initMobileNav);
+	} else {
+		initMobileNav();
+	}
+</script>

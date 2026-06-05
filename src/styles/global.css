@@ -78,6 +78,7 @@ body {
 	font-family: "Atkinson", system-ui, -apple-system, sans-serif;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 	background: var(--lumynn-bg);
 	color: var(--lumynn-ink);
 	font-size: var(--lumynn-text-base);
@@ -187,7 +188,7 @@ img, video, picture {
 	display: grid;
 	gap: var(--lumynn-space-4);
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
 	.grid-2 { grid-template-columns: repeat(2, 1fr); }
 	.grid-3 { grid-template-columns: repeat(3, 1fr); }
 	.grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -232,7 +233,7 @@ img, video, picture {
 	display: grid;
 	gap: var(--lumynn-space-4);
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
 	.screenshots {
 		grid-template-columns: repeat(3, 1fr);
 		align-items: start;
@@ -246,7 +247,7 @@ img, video, picture {
 
 /* Force all screenshot frames to the same height */
 .screenshots .screenshot {
-	height: 280px;
+	height: 200px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -254,9 +255,9 @@ img, video, picture {
 	cursor: pointer;
 	transition: transform 120ms var(--lumynn-ease), box-shadow 120ms var(--lumynn-ease);
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
 	.screenshots .screenshot {
-		height: 240px;
+		height: 260px;
 	}
 }
 .screenshots .screenshot:hover {
@@ -405,7 +406,7 @@ img, video, picture {
 	display: grid;
 	gap: 2rem 2.5rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
 	.features {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -502,11 +503,12 @@ footer a { color: inherit; border-bottom-color: var(--lumynn-border); }
 .max-ch { max-width: 68ch; margin-left: auto; margin-right: auto; }
 
 /* Mobile */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
 	body { font-size: 17px; }
 	main { padding-left: 1rem; padding-right: 1rem; }
 	.section { padding-top: var(--lumynn-space-5); padding-bottom: var(--lumynn-space-5); }
 	.hero { padding-top: 3.5rem; }
+	.br-desktop { display: none; }
 }
 
 /* Respect reduced motion */
