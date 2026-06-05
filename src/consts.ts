@@ -3,8 +3,8 @@
 
 export const SITE_TITLE = "Lumynn";
 export const SITE_DESCRIPTION = "Private Markdown workspace with AI that reads your notes. On your server, your files, your terms.";
-export const SITE_TAGLINE = "Private Markdown workspace";
-export const BRAND_POSITIONING = "From intellectual property to strategic clarity.";
+export const SITE_TAGLINE = "Private intelligence";
+export const BRAND_POSITIONING = "Turn private intelligence into lucid clarity.";
 
 // Accent palette pulled from the Lumynn app (08-current-theme-tokens + 09 overrides)
 export const BRAND_COLORS = {
