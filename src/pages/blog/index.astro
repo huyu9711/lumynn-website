@@ -17,7 +17,7 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			main {
-				width: 960px;
+				max-width: 960px;
 			}
 			.blog-header { margin-bottom: 2rem; }
 			.blog-title { font-size: 2rem; margin-bottom: 0.35rem; }
@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
 			}
 			ul li * {
 				text-decoration: none;
-				transition: 0.2s ease;
+				transition: color 0.2s ease, border-color 0.2s ease;
 			}
 			ul li img {
 				margin-bottom: 0.6rem;
